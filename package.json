@@ -1,0 +1,9 @@
+{
+  "name": "bracket-monorepo",
+  "packageManager": "yarn@4.11.0",
+  "workspaces": [
+    "mobile",
+    "api",
+    "server"
+  ]
+}

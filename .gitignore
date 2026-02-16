@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# build output
+dist/
+
+# env files
+.env
+.env*.local
+
+# macOS
+.DS_Store
+
+# debug logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# typescript
+*.tsbuildinfo
