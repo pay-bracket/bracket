@@ -44,7 +44,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.11.6, @babel/core@npm:^7.12.3, @babel/core@npm:^7.20.0, @babel/core@npm:^7.25.2":
+"@babel/core@npm:^7.11.6, @babel/core@npm:^7.12.3, @babel/core@npm:^7.20.0, @babel/core@npm:^7.25.2, @babel/core@npm:^7.26.0":
   version: 7.29.0
   resolution: "@babel/core@npm:7.29.0"
   dependencies:
@@ -1897,6 +1897,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@playwright/test@npm:^1.58.2":
+  version: 1.58.2
+  resolution: "@playwright/test@npm:1.58.2"
+  dependencies:
+    playwright: "npm:1.58.2"
+  bin:
+    playwright: cli.js
+  checksum: 10c0/2164c03ad97c3653ff02e8818a71f3b2bbc344ac07924c9d8e31cd57505d6d37596015a41f51396b3ed8de6840f59143eaa9c21bf65515963da20740119811da
+  languageName: node
+  linkType: hard
+
 "@radix-ui/primitive@npm:1.1.3":
   version: 1.1.3
   resolution: "@radix-ui/primitive@npm:1.1.3"
@@ -2446,6 +2457,13 @@ __metadata:
   version: 0.74.89
   resolution: "@react-native/normalize-colors@npm:0.74.89"
   checksum: 10c0/6d0e5c91793ca5a66b4a0e5995361f474caacac56bde4772ac02b8ab470bd323076c567bd8856b0b097816d2b890e73a4040a3df01fd284adee683f5ba89d5ba
+  languageName: node
+  linkType: hard
+
+"@react-native/normalize-colors@npm:^0.81.0":
+  version: 0.81.6
+  resolution: "@react-native/normalize-colors@npm:0.81.6"
+  checksum: 10c0/e1f35b9b44b76d16bfe299b44c37fd8699e435a76b22eaebb8450905b05b4a47a720fe14502a7014c19a024900fd9d1d193c7bb2a7e8011c72fa222cfed9028c
   languageName: node
   linkType: hard
 
@@ -3841,46 +3859,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"bracket@workspace:mobile":
-  version: 0.0.0-use.local
-  resolution: "bracket@workspace:mobile"
-  dependencies:
-    "@expo/vector-icons": "npm:^15.0.3"
-    "@react-navigation/bottom-tabs": "npm:^7.4.0"
-    "@react-navigation/elements": "npm:^2.6.3"
-    "@react-navigation/native": "npm:^7.1.8"
-    "@tanstack/react-query": "npm:^5.90.21"
-    "@trpc/client": "npm:^11.10.0"
-    "@trpc/react-query": "npm:^11.10.0"
-    "@types/react": "npm:~19.1.0"
-    api: "workspace:*"
-    eslint: "npm:^9.25.0"
-    eslint-config-expo: "npm:~10.0.0"
-    expo: "npm:~54.0.33"
-    expo-constants: "npm:~18.0.13"
-    expo-font: "npm:~14.0.11"
-    expo-haptics: "npm:~15.0.8"
-    expo-image: "npm:~3.0.11"
-    expo-linking: "npm:~8.0.11"
-    expo-router: "npm:~6.0.23"
-    expo-splash-screen: "npm:~31.0.13"
-    expo-status-bar: "npm:~3.0.9"
-    expo-symbols: "npm:~1.0.8"
-    expo-system-ui: "npm:~6.0.9"
-    expo-web-browser: "npm:~15.0.10"
-    react: "npm:19.1.0"
-    react-dom: "npm:19.1.0"
-    react-native: "npm:0.81.5"
-    react-native-gesture-handler: "npm:~2.28.0"
-    react-native-reanimated: "npm:~4.1.1"
-    react-native-safe-area-context: "npm:~5.6.0"
-    react-native-screens: "npm:~4.16.0"
-    react-native-web: "npm:~0.21.0"
-    react-native-worklets: "npm:0.5.1"
-    typescript: "npm:~5.9.2"
-  languageName: unknown
-  linkType: soft
-
 "browserslist@npm:^4.24.0, browserslist@npm:^4.25.0, browserslist@npm:^4.28.1":
   version: 4.28.1
   resolution: "browserslist@npm:4.28.1"
@@ -5070,6 +5048,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-clipboard@npm:~8.0.8":
+  version: 8.0.8
+  resolution: "expo-clipboard@npm:8.0.8"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/afd16183bee237c825ed594320dd4eccd1b8cbcdf6fa993b80c946a7dc26adcdd48a847bd57e7150f176866a6e351a898efe87188793ef0982382ba1e32fb6fb
+  languageName: node
+  linkType: hard
+
 "expo-constants@npm:~18.0.12, expo-constants@npm:~18.0.13":
   version: 18.0.13
   resolution: "expo-constants@npm:18.0.13"
@@ -5137,6 +5126,17 @@ __metadata:
     expo: "*"
     react: "*"
   checksum: 10c0/23064b18285498e70be0aa525dc875cc809fc723b9a101d51e4721a09b1460eb041c73ebeb6d51e9175bb4c9b7a668bc08a48b99ebddac4cfaadb5a47194d329
+  languageName: node
+  linkType: hard
+
+"expo-linear-gradient@npm:~15.0.8":
+  version: 15.0.8
+  resolution: "expo-linear-gradient@npm:15.0.8"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/2ac3bff62143083e3d5b894fccc4c76de058277f65ed123232636cf26c88da6d566fa3cd46be4101f86e66b89ede7c058e12c93493b752df562da2fa971dcd66
   languageName: node
   linkType: hard
 
@@ -5622,12 +5622,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fsevents@npm:2.3.2":
+  version: 2.3.2
+  resolution: "fsevents@npm:2.3.2"
+  dependencies:
+    node-gyp: "npm:latest"
+  checksum: 10c0/be78a3efa3e181cda3cf7a4637cb527bcebb0bd0ea0440105a3bb45b86f9245b307dc10a2507e8f4498a7d4ec349d1910f4d73e4d4495b16103106e07eee735b
+  conditions: os=darwin
+  languageName: node
+  linkType: hard
+
 "fsevents@npm:^2.3.2":
   version: 2.3.3
   resolution: "fsevents@npm:2.3.3"
   dependencies:
     node-gyp: "npm:latest"
   checksum: 10c0/a1f0c44595123ed717febbc478aa952e47adfc28e2092be66b8ab1635147254ca6cfe1df792a8997f22716d4cbafc73309899ff7bfac2ac3ad8cf2e4ecc3ec60
+  conditions: os=darwin
+  languageName: node
+  linkType: hard
+
+"fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>":
+  version: 2.3.2
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  dependencies:
+    node-gyp: "npm:latest"
   conditions: os=darwin
   languageName: node
   linkType: hard
@@ -7439,6 +7458,55 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mobile@workspace:mobile":
+  version: 0.0.0-use.local
+  resolution: "mobile@workspace:mobile"
+  dependencies:
+    "@babel/core": "npm:^7.26.0"
+    "@expo/vector-icons": "npm:^15.0.3"
+    "@playwright/test": "npm:^1.58.2"
+    "@react-native/normalize-colors": "npm:^0.81.0"
+    "@react-navigation/bottom-tabs": "npm:^7.4.0"
+    "@react-navigation/elements": "npm:^2.6.3"
+    "@react-navigation/native": "npm:^7.1.8"
+    "@tanstack/react-query": "npm:^5.90.21"
+    "@trpc/client": "npm:^11.10.0"
+    "@trpc/react-query": "npm:^11.10.0"
+    "@trpc/server": "npm:^11.10.0"
+    "@types/react": "npm:~19.1.0"
+    api: "workspace:*"
+    eslint: "npm:^9.25.0"
+    eslint-config-expo: "npm:~10.0.0"
+    expo: "npm:~54.0.33"
+    expo-clipboard: "npm:~8.0.8"
+    expo-constants: "npm:~18.0.13"
+    expo-font: "npm:~14.0.11"
+    expo-haptics: "npm:~15.0.8"
+    expo-image: "npm:~3.0.11"
+    expo-linear-gradient: "npm:~15.0.8"
+    expo-linking: "npm:~8.0.11"
+    expo-router: "npm:~6.0.23"
+    expo-splash-screen: "npm:~31.0.13"
+    expo-status-bar: "npm:~3.0.9"
+    expo-symbols: "npm:~1.0.8"
+    expo-system-ui: "npm:~6.0.9"
+    expo-web-browser: "npm:~15.0.10"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+    react-native: "npm:0.81.5"
+    react-native-edge-to-edge: "npm:^1.7.0"
+    react-native-gesture-handler: "npm:~2.28.0"
+    react-native-nitro-modules: "npm:^0.33.9"
+    react-native-reanimated: "npm:~4.1.1"
+    react-native-safe-area-context: "npm:~5.6.0"
+    react-native-screens: "npm:~4.16.0"
+    react-native-unistyles: "npm:^3.0.24"
+    react-native-web: "npm:~0.21.0"
+    react-native-worklets: "npm:0.5.1"
+    typescript: "npm:~5.9.2"
+  languageName: unknown
+  linkType: soft
+
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -7958,6 +8026,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"playwright-core@npm:1.58.2":
+  version: 1.58.2
+  resolution: "playwright-core@npm:1.58.2"
+  bin:
+    playwright-core: cli.js
+  checksum: 10c0/5aa15b2b764e6ffe738293a09081a6f7023847a0dbf4cd05fe10eed2e25450d321baf7482f938f2d2eb330291e197fa23e57b29a5b552b89927ceb791266225b
+  languageName: node
+  linkType: hard
+
+"playwright@npm:1.58.2":
+  version: 1.58.2
+  resolution: "playwright@npm:1.58.2"
+  dependencies:
+    fsevents: "npm:2.3.2"
+    playwright-core: "npm:1.58.2"
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    playwright: cli.js
+  checksum: 10c0/d060d9b7cc124bd8b5dffebaab5e84f6b34654a553758fe7b19cc598dfbee93f6ecfbdc1832b40a6380ae04eade86ef3285ba03aa0b136799e83402246dc0727
+  languageName: node
+  linkType: hard
+
 "plist@npm:^3.0.5":
   version: 3.1.0
   resolution: "plist@npm:3.1.0"
@@ -8243,6 +8335,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-edge-to-edge@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "react-native-edge-to-edge@npm:1.7.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/809dcf1c68f79cff788963ec7691b37024986e82470be5047bfbe42929fc2c7d45db23eab816321e776f0bb3a8295f7efa526377bce6a559c10681cd409d597d
+  languageName: node
+  linkType: hard
+
 "react-native-gesture-handler@npm:~2.28.0":
   version: 2.28.0
   resolution: "react-native-gesture-handler@npm:2.28.0"
@@ -8264,6 +8366,16 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 10c0/87d20b900aded7d44c90afb946a7aa03c23a94ca3dd547bdddc2303b85357e4aab22567a57b19f1558d6c8be7058e3dcf34faa1e15182d1604f90974266d9a1d
+  languageName: node
+  linkType: hard
+
+"react-native-nitro-modules@npm:^0.33.9":
+  version: 0.33.9
+  resolution: "react-native-nitro-modules@npm:0.33.9"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/1784fb51abbca6f82d792134055352c42a3bafb3450fc326b04f3cea092126ab1c9ebf152fc0ca43130c46f1537996b06ff33e644a576b03eb97f4413f5c76c3
   languageName: node
   linkType: hard
 
@@ -8303,6 +8415,23 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 10c0/8ec459ff52cbd317bfca598843a0010b4ca9070d05664f28d792594d8ceabb398b9d68abb578f40295e41f906308efe7ac7359046fba7aaf318a0d9d65446102
+  languageName: node
+  linkType: hard
+
+"react-native-unistyles@npm:^3.0.24":
+  version: 3.0.24
+  resolution: "react-native-unistyles@npm:3.0.24"
+  peerDependencies:
+    "@react-native/normalize-colors": "*"
+    react: "*"
+    react-native: ">=0.76.0"
+    react-native-edge-to-edge: "*"
+    react-native-nitro-modules: "*"
+    react-native-reanimated: "*"
+  peerDependenciesMeta:
+    react-native-reanimated:
+      optional: true
+  checksum: 10c0/92fa56cda65018b6cd43050b74b1e28094730de119e705f233e1d6d777a06b5d13b1d226a834be0d859149c1a9600abd87704a0e3a750c43371c7eac79cb58cd
   languageName: node
   linkType: hard
 
