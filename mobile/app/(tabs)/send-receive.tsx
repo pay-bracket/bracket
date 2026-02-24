@@ -3,11 +3,14 @@ import { useRouter } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, spacing } from '@/constants/theme';
-import { account, PaymentRequest, paymentRequests, scheduledPayments } from '@/lib/mock-data';
+import { PaymentRequest } from '@/lib/mock-data';
+import { useApp } from '@/lib/store';
 
 export default function SendReceiveScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const { state } = useApp();
+  const { account, paymentRequests, scheduledPayments } = state;
 
   const wholeDollars = '$' + Math.floor(account.balance).toLocaleString();
   const cents = '.' + account.balance.toFixed(2).split('.')[1];
@@ -49,8 +52,8 @@ export default function SendReceiveScreen() {
         {/* Action Buttons */}
         <View style={styles.actionRow}>
           <ActionIcon icon="card-outline" label={'Deposit\nCheck'} onPress={() => {}} />
-          <ActionIcon icon="arrow-down-outline" label="Request" onPress={() => {}} />
-          <ActionIcon icon="send-outline" label="Send" onPress={() => router.push('/new-invoice')} />
+          <ActionIcon icon="arrow-down-outline" label="Request" onPress={() => router.push('/contacts?mode=request' as any)} />
+          <ActionIcon icon="send-outline" label="Send" onPress={() => router.push('/contacts?mode=send' as any)} />
           <ActionIcon icon="swap-horizontal" label="Transfer" onPress={() => {}} />
         </View>
 

@@ -5,7 +5,7 @@ import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 
 import * as Clipboard from 'expo-clipboard';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, spacing } from '@/constants/theme';
-import { account, getTransactionById } from '@/lib/mock-data';
+import { useApp } from '@/lib/store';
 
 const iconMap: Record<string, keyof typeof Ionicons.glyphMap> = {
   coffee: 'cafe',
@@ -33,8 +33,10 @@ export default function TransactionDetailScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const [noteText, setNoteText] = useState('');
+  const { state } = useApp();
+  const { account } = state;
 
-  const txn = getTransactionById(id);
+  const txn = state.transactions.find((t) => t.id === id);
 
   if (!txn) {
     return (

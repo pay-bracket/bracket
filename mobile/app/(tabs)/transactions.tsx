@@ -5,17 +5,14 @@ import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { TransactionList } from '@/components/transaction-list';
 import { colors, spacing } from '@/constants/theme';
-import {
-  account,
-  getTransactionSummary,
-  groupTransactionsByDate,
-  transactions,
-  TransactionSection,
-} from '@/lib/mock-data';
+import { TransactionSection } from '@/lib/mock-data';
+import { useApp, groupTransactionsByDate, getTransactionSummary } from '@/lib/store';
 
 export default function TransactionsScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const { state } = useApp();
+  const { account, transactions } = state;
   const [search, setSearch] = useState('');
   const [collapsedDates, setCollapsedDates] = useState<Set<string>>(new Set());
 

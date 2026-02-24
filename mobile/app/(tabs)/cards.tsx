@@ -3,11 +3,13 @@ import { useRouter } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, fonts, radius, spacing } from '@/constants/theme';
-import { account, debitCards } from '@/lib/mock-data';
+import { useApp } from '@/lib/store';
 
 export default function CardsScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const { state } = useApp();
+  const { account, debitCards } = state;
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
@@ -26,17 +28,22 @@ export default function CardsScreen() {
         </View>
 
         {/* First Card */}
-        <View style={styles.cardSection}>
-          <Text style={styles.cardName}>{debitCards[0].name}</Text>
-          <View style={styles.cardInfoRow}>
-            <Ionicons name="card-outline" size={18} color={colors.textPrimary} />
-            <View style={styles.dot} />
-            <Text style={styles.cardLast4}>{debitCards[0].last4}</Text>
+        <Pressable
+          style={({ pressed }) => [pressed && { opacity: 0.7 }]}
+          onPress={() => router.push({ pathname: '/card/[id]', params: { id: debitCards[0].id } } as any)}
+        >
+          <View style={styles.cardSection}>
+            <Text style={styles.cardName}>{debitCards[0].name}</Text>
+            <View style={styles.cardInfoRow}>
+              <Ionicons name="card-outline" size={18} color={colors.textPrimary} />
+              <View style={styles.dot} />
+              <Text style={styles.cardLast4}>{debitCards[0].last4}</Text>
+            </View>
+            <View style={styles.cardVisual}>
+              <View style={styles.cardVisualInner} />
+            </View>
           </View>
-          <View style={styles.cardVisual}>
-            <View style={styles.cardVisualInner} />
-          </View>
-        </View>
+        </Pressable>
 
         {/* Add to Apple Pay */}
         <Pressable style={({ pressed }) => [styles.applePayButton, pressed && { opacity: 0.8 }]}>
@@ -54,17 +61,22 @@ export default function CardsScreen() {
         <View style={styles.divider} />
 
         {/* Second Card */}
-        <View style={styles.cardSection}>
-          <Text style={styles.cardName}>{debitCards[1].name}</Text>
-          <View style={styles.cardInfoRow}>
-            <Ionicons name="card-outline" size={18} color={colors.textPrimary} />
-            <View style={styles.dot} />
-            <Text style={styles.cardLast4}>{debitCards[1].last4}</Text>
+        <Pressable
+          style={({ pressed }) => [pressed && { opacity: 0.7 }]}
+          onPress={() => router.push({ pathname: '/card/[id]', params: { id: debitCards[1].id } } as any)}
+        >
+          <View style={styles.cardSection}>
+            <Text style={styles.cardName}>{debitCards[1].name}</Text>
+            <View style={styles.cardInfoRow}>
+              <Ionicons name="card-outline" size={18} color={colors.textPrimary} />
+              <View style={styles.dot} />
+              <Text style={styles.cardLast4}>{debitCards[1].last4}</Text>
+            </View>
+            <View style={styles.cardVisual}>
+              <View style={styles.cardVisualInner} />
+            </View>
           </View>
-          <View style={styles.cardVisual}>
-            <View style={styles.cardVisualInner} />
-          </View>
-        </View>
+        </Pressable>
       </ScrollView>
     </View>
   );

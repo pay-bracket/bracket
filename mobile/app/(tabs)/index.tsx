@@ -5,12 +5,14 @@ import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-nati
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { TransactionList } from '@/components/transaction-list';
 import { colors, spacing } from '@/constants/theme';
-import { account, debitCards, transactions } from '@/lib/mock-data';
+import { useApp } from '@/lib/store';
 
 export default function HomeScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const [documentsOpen, setDocumentsOpen] = useState(false);
+  const { state } = useApp();
+  const { account, transactions, debitCards } = state;
 
   const wholeDollars = '$' + Math.floor(account.balance).toLocaleString();
   const cents = '.' + account.balance.toFixed(2).split('.')[1];
@@ -53,7 +55,7 @@ export default function HomeScreen() {
         {/* Action Buttons */}
         <View style={styles.actionRow}>
           <ActionButton icon="card" label={"Deposit\nCheck"} onPress={() => {}} />
-          <ActionButton icon="send" label="Send" onPress={() => router.push('/new-invoice')} />
+          <ActionButton icon="send" label="Send" onPress={() => router.push('/contacts?mode=send' as any)} />
           <ActionButton icon="arrow-down" label="Receive" onPress={() => router.push('/qr-code')} />
           <ActionButton icon="document-outline" label="Documents" onPress={() => setDocumentsOpen(true)} />
         </View>

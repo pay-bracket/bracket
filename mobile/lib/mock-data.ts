@@ -435,6 +435,24 @@ export const statementSections: StatementSection[] = [
   },
 ];
 
+export type Contact = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  initials: string;
+  color: string;
+  email?: string;
+  accountNumber?: string;
+  routingNumber?: string;
+  notes?: string;
+};
+
+export type InvoiceLineItem = {
+  id: string;
+  description: string;
+  amount: number;
+};
+
 export type PaymentRequest = {
   id: string;
   name: string;
@@ -442,7 +460,14 @@ export type PaymentRequest = {
   color: string;
   amount: number;
   status: 'open' | 'filled' | 'declined';
+  contactId?: string;
+  lineItems?: InvoiceLineItem[];
+  createdAt?: string;
 };
+
+export function getInitials(firstName: string, lastName: string): string {
+  return (firstName.charAt(0) + lastName.charAt(0)).toUpperCase();
+}
 
 export const paymentRequests: PaymentRequest[] = [
   { id: '1', name: 'Adam White', initials: 'AW', color: '#56CCFF', amount: 300, status: 'open' },
@@ -464,3 +489,17 @@ export const employer: Employer = {
   nextPay: 'Mar 1, 2026',
   lastAmount: 2450.0,
 };
+
+export const contacts: Contact[] = [
+  { id: 'c1', firstName: 'Adam', lastName: 'White', initials: 'AW', color: '#56CCFF' },
+  { id: 'c2', firstName: 'Alex', lastName: 'Wong', initials: 'AW', color: '#FF9757' },
+  { id: 'c3', firstName: 'Amy', lastName: 'Walker', initials: 'AW', color: '#A78BFA' },
+  { id: 'c4', firstName: 'Brock', lastName: 'Missiles', initials: 'BM', color: '#FF56AD' },
+  { id: 'c5', firstName: 'Beth', lastName: 'Monroe', initials: 'BM', color: '#5ADF8D' },
+  { id: 'c6', firstName: 'Brad', lastName: 'Mitchell', initials: 'BM', color: '#FFD857' },
+  { id: 'c7', firstName: 'Brandon', lastName: 'Miles', initials: 'BM', color: '#60A5FA' },
+  { id: 'c8', firstName: 'Cathy', lastName: 'Mulford', initials: 'CM', color: '#8956FF' },
+  { id: 'c9', firstName: 'Carl', lastName: 'Meyer', initials: 'CM', color: '#2DD4BF' },
+  { id: 'c10', firstName: 'Claire', lastName: 'Moss', initials: 'CM', color: '#F472B6' },
+  { id: 'c11', firstName: 'Cindy', lastName: 'Morris', initials: 'CM', color: '#ABFF57' },
+];

@@ -4,11 +4,13 @@ import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { NotificationItem } from '@/components/notification-item';
 import { colors, fonts, spacing } from '@/constants/theme';
-import { notifications } from '@/lib/mock-data';
+import { useApp } from '@/lib/store';
 
 export default function NotificationsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { state } = useApp();
+  const { notifications } = state;
   const unreadCount = notifications.filter((n) => !n.read).length;
 
   return (
